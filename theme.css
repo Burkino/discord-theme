@@ -1,0 +1,28 @@
+.wrapper-3WhCwL {
+    color: #7289da !important;
+    background: rgba(114,137,218,.1) !important;
+}
+button[aria-label="Open GIF picker"]{
+    display: none;
+}
+
+button[aria-label="Send a gift"] {
+    display: none;
+}
+button[aria-label="Open sticker picker"] {
+    display: none;
+}
+button[aria-label="Boost this server"] {
+	display: none;
+}
+div[aria-label="Help"] {
+    display: none;
+}
+
+#user-context-invite-to-server {
+    display: none;
+}
+
+#user-context-call {
+    display: none;
+}
