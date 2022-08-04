@@ -1,0 +1,8 @@
+{
+    "name": "Remove buttons",
+    "description": "Removes the annoying buttons.",
+    "version": "1",
+    "author": "Burkino",
+    "theme": "theme.css",
+    "license": "unknown"
+}
