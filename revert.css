@@ -1,0 +1,505 @@
+/* Version */
+div[class*="sidebar"] nav[class^="sidebar-"] div[class^="info"]:last-child > div:last-child::after {
+  content: "Revert Theme (22/11/2020)";
+  display: block;
+}
+
+/* Variables */
+.group-spacing-0 {
+  --f-msg-spacing: 20px;
+}
+
+.group-spacing-4 {
+  --f-msg-spacing: 25px;
+}
+
+.group-spacing-8 {
+  --f-msg-spacing: 30px;
+}
+
+.group-spacing-16 {
+  --f-msg-spacing: 40px;
+}
+
+.group-spacing-24 {
+  --f-msg-spacing: 50px;
+}
+
+/* Message group border */
+[class*="group-spacing"] div[class*="groupStart"] {
+  margin-top: var(--f-msg-spacing)!important;
+}
+
+[class*="group-spacing"] div[class*="groupStart"]::after {
+  content: "";
+  position: absolute;
+  top: calc(-1 * var(--f-msg-spacing) / 2);
+  left: 20px;
+  right: 20px;
+  border-bottom: thin solid var(--background-modifier-accent);
+}
+
+div[class^="divider-"] + [class*="groupStart"],
+div[class*="divider-"] + div[class*="backgroundFlash"] > div[class*="groupStart"] {
+  margin-top: 0px!important;
+}
+
+div[class^="divider-"] + [class*="groupStart"]::after,
+div[class*="divider-"] + div[class*="backgroundFlash"] > div[class*="groupStart"]::after {
+  display: none;
+}
+
+/* Welcome Message */
+main[class^="chatContent"] > div[class*="messagesWrapper"] #messagesNavigationDescription + div[class*="container"] {
+  padding: 20px 20px 0;
+  border: none;
+}
+
+main[class^="chatContent"] > div[class*="messagesWrapper"] #messagesNavigationDescription + div[class*="container"] > div[class*="emptyMessage"] {
+  border: none;
+  padding: 0;
+  height: 20px;
+}
+
+main[class^="chatContent"] > div[class*="messagesWrapper"] #messagesNavigationDescription + div[class*="container"] > div[class*="emptyMessage"] > * {
+  display: none;
+}
+
+/* Beginning of Channel */
+main[class^="chatContent"] > div[class*="messagesWrapper"] #messagesNavigationDescription + div[class*="default"] {
+  margin: 0 20px;
+  border-bottom: 0px;
+}
+
+/* Dividers */
+main[class^="chatContent"] > div[class^="messagesWrapper"] div[class^="divider-"] {
+  margin: calc(var(--f-msg-spacing) / 2) 20px;
+  top: 0;
+  height: 22px;
+  border-top: 0;
+}
+
+main[class^="chatContent"] > div[class^="messagesWrapper"] div[class^="divider-"] > span[class*="content"] {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 500;
+  padding: 0 8px;
+  background-color: var(--background-primary);
+  border-radius: 0;
+}
+
+main[class^="chatContent"] > div[class^="messagesWrapper"] div[class^="divider-"] > span::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  border-bottom: thin solid;
+  border-color: var(--background-modifier-accent);
+  z-index: -1;
+}
+
+main[class^="chatContent"] > div[class^="messagesWrapper"] div[class^="divider-"][class*="isUnread"] > span[class*="content"]::after {
+  border-color: currentColor;
+  opacity: .7;
+}
+
+main[class^="chatContent"] > div[class^="messagesWrapper"] div[class^="divider-"][class*="isUnread"] > span[class*="content"] + span[class*="unreadPill"] {
+  display: none;
+}
+
+main[class^="chatContent"] > div[class^="messagesWrapper"] div[class^="divider-"][class*="isUnread"] > span[class*="unreadPill"] {
+  position: initial;
+  height: 100%;
+  top: 0;
+  color: #f04747;
+  font-weight: 600;
+  padding: 0 8px;
+  background-color: var(--background-primary);
+  border-radius: 0;
+  font-size: 0px;
+}
+
+main[class^="chatContent"] > div[class^="messagesWrapper"] div[class^="divider-"][class*="isUnread"] > span[class*="unreadPill"]::after {
+  font-size: 14px;
+  content: "NEW MESSAGES";
+}
+
+main[class^="chatContent"] > div[class^="messagesWrapper"] div[class^="divider-"][class*="isUnread"] > span::before {
+  border-color: currentColor;
+  opacity: .7;
+}
+
+main[class^="chatContent"] > div[class^="messagesWrapper"] div[class^="divider-"][class*="isUnread"] > span[class*="unreadPill"] svg {
+  display: none;
+}
+
+/* Remove Highlight & Timestamp */
+div[class*="message-"][class*="wrapper-"]:not([class*="replying"]) {
+  background-color: transparent!important;
+}
+
+div[class*="cozyMessage"] span[class*="timestampVisibleOnHover"] {
+  display: none;
+}
+
+/* Header & Avatar */
+div[class*="cozyMessage"] > div[class*="contents"] > h2[class*="header"] > span[class*="headerText"] {
+  margin-right: .3rem;
+}
+
+div[class*="cozyMessage"] > div[class*="contents"] > h2[class*="header"] > span[class*="timestamp"] {
+  margin-left: 0;
+}
+
+div[class*="cozyMessage"] > div[class*="contents"] img[class*="avatar-"] {
+  width: 40px;
+  height: 40px;
+  margin-top: 2px;
+  left: 20px;
+  filter: none!important;
+  transform: none!important;
+  -webkit-user-drag: none;
+}
+
+div[class*="cozyMessage"] > div[class*="contents"] img[class*="avatar-"]:hover {
+  opacity: .8;
+}
+
+/* Text Padding */
+div[class*="message-"][class*="wrapper-"] {
+  padding: 0;
+  padding-left: 80px!important;
+  padding-right: 10px!important;
+}
+
+div[class*="cozyMessage"] > div[class*="contents"] > div[class*="markup"] {
+  padding-left: 80px;
+  margin-left: -80px;
+}
+
+/* Mentions */
+div[class*="message"][class*="mentioned"]::before {
+  display: none;
+}
+
+div[class*="cozyMessage"][class*="mentioned"] > div[class*="contents"] > div[class*="markup"] {
+  background-color: var(--background-mentioned);
+  border-radius: 0 3px 3px 0;
+  position: relative;
+  margin: -.1rem -.2rem .1rem;
+  padding: .1rem .2rem;
+  padding-left: calc(6px + .2rem);
+  margin-left: -6px;
+}
+
+div[class*="cozyMessage"][class*="mentioned"] > div[class*="contents"] > div[class*="markup"]::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 2px;
+  background-color: rgba(250,166,26,.2);
+  border-left: 4px solid #faa61a;
+  border-radius: 3px 0 0 3px;
+  height: 100%;
+}
+
+/* Buttons */
+main[class^="chatContent"] > div[class*="messagesWrapper"] div[class*="message"] > div[class*="buttonContainer"] > div[class*="buttons"] {
+  padding-right: 10px;
+  padding-left: 0;
+  top: 0;
+}
+
+main[class^="chatContent"] > div[class*="messagesWrapper"] div[class*="cozyMessage"] > div[class*="buttonContainer"] > div[class*="buttons"][class*="isHeader"] {
+  top: 1.375rem;
+}
+
+main[class^="chatContent"] > div[class*="messagesWrapper"] div[class*="message"] > div[class*="buttonContainer"] > div[class*="buttons"] > div[class*="wrapper"] {
+  height: 1.375rem;
+  background-color: transparent;
+  box-shadow: none;
+  display: flex;
+  align-items: flex-start;
+}
+
+main[class^="chatContent"] > div[class*="messagesWrapper"] div[class*="message"] > div[class*="buttonContainer"] > div[class*="buttons"] > div[class*="wrapper"] > div[class*="button"] {
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  padding: 0;
+  background-color: transparent!important;
+}
+
+main[class^="chatContent"] > div[class*="messagesWrapper"] div[class*="message"] > div[class*="buttonContainer"] > div[class*="buttons"] > div[class*="wrapper"] > div[class*="button"] svg {
+  height: 1rem;
+  width: 1rem;
+}
+
+main[class^="chatContent"] > div[class*="messagesWrapper"] div[class*="message"] > div[class*="buttonContainer"] > div[class*="buttons"] > div[class*="wrapper"] > div[class*="button"][aria-expanded$="e"]:last-child svg {
+  transform: rotate(90deg);
+}
+
+main[class^="chatContent"] > div[class*="messagesWrapper"] div[class*="message"] > div[class*="contents"] > div[class*="markup"]::before {
+  content: "";
+  width: 3rem;
+  height: 1rem;
+  display: inline-flex;
+  float: right;
+}
+
+/* Embeds & Reactions */
+div[class*="cozyMessage"] > div[class*="container"]:not([class*="button"]) {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  grid-row-gap: 6px;
+}
+
+main[class^="chatContent"] > div[class*="messagesWrapper"] div[class*="message"] div[class*="reactions"] {
+  margin: -2px 0;
+  margin-left: -2px;
+  padding: 0;
+}
+
+main[class^="chatContent"] > div[class*="messagesWrapper"] div[class*="message"] div[class*="reactions"] > div > div[class*="reaction"] {
+  border-radius: 3px;
+  margin: 2px;
+}
+
+main[class^="chatContent"] > div[class*="messagesWrapper"] div[class*="message"] div[class*="reactions"] > div > div[class*="reaction"] div[class*="reactionInner"] {
+  padding: 0 6px;
+}
+
+main[class^="chatContent"] > div[class*="messagesWrapper"] div[class*="message"] div[class*="reactions"] > div > div[class*="reaction"] div[class*="reactionInner"] > img {
+  margin: 3px 0;
+}
+
+main[class^="chatContent"] > div[class*="messagesWrapper"] div[class*="message"] div[class*="reactions"] > div > div[class*="reaction"] div[class*="reactionInner"] > div[class*="reactionCount"] {
+  margin-left: 6px;
+}
+
+main[class^="chatContent"] > div[class*="messagesWrapper"] div[class*="message"] div[class*="reactions"] > div > div[class*="reactionBtn"] {
+  margin-left: 6px;
+}
+
+/* Clyde */
+main[class^="chatContent"] > div[class*="messagesWrapper"] div[class*="message-"][class*="ephemeral"]::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: calc(-1 * var(--f-msg-spacing) / 2);
+  height: calc(100% + var(--f-msg-spacing));
+  width: 100%;
+  background: linear-gradient(90deg,var(--background-secondary) -40%,transparent 50%);
+}
+
+main[class^="chatContent"] > div[class*="messagesWrapper"] div[class*="message-"][class*="ephemeral"] div[class^="markup"],
+main[class^="chatContent"] > div[class*="messagesWrapper"] div[class*="message-"][class*="ephemeral"] div[class^="container"] {
+  position: relative;
+}
+
+main[class^="chatContent"] > div[class*="messagesWrapper"] div[class*="message-"][class*="ephemeral"] div[class*="localBotMessage"] {
+  margin-top: 0;
+  margin-bottom: -8px;
+}
+
+/* Replies */
+div[class*="message-"][class*="wrapper-"] > div[class*="repliedMessage"]::before {
+  --avatar-size: 40px;
+  --gutter: 20px;
+}
+
+div[class*="message-"][class*="replying"]::before {
+  display: none;
+} 
+
+/* Uploading */
+main[class^="chatContent"] > div[class*="messagesWrapper"] div[class^="wrapper"][class*="cozy"]:not([class*="message"]):not([class*="system"]):not([class*="backgroundFlash"]) {
+  padding: 0;
+  padding-left: 80px;
+}
+
+main[class^="chatContent"] > div[class*="messagesWrapper"] div[class^="wrapper"][class*="cozy"]:not([class*="message"]):not([class*="system"]):not([class*="backgroundFlash"]) > div[class*="contents"] > img {
+  pointer-events: none;
+  margin-left: 4px;
+  margin-right: 20px;
+  filter: none!important;
+  transform: none!important;
+}
+
+main[class^="chatContent"] > div[class*="messagesWrapper"] div[class^="wrapper"][class*="cozy"]:not([class*="message"]):not([class*="system"]):not([class*="backgroundFlash"]) > div[class*="contents"] > h2[class*="header"] > [class*="username"] {
+  margin-right: .3rem;
+}
+
+main[class^="chatContent"] > div[class*="messagesWrapper"] div[class^="wrapper"][class*="cozy"]:not([class*="message"]):not([class*="system"]):not([class*="backgroundFlash"]) > div[class*="contents"] > h2[class*="header"] > span[class*="timestamp"] {
+  margin-left: 0;
+}
+
+main[class^="chatContent"] > div[class*="messagesWrapper"] div[class^="wrapper"][class*="cozy"]:not([class*="message"]):not([class*="system"]):not([class*="backgroundFlash"]) > div[class*="contents"] > h2[class*="header"] {
+  overflow: visible;
+  position: initial;
+  margin-top: var(--f-msg-spacing);
+}
+
+main[class^="chatContent"] > div[class*="messagesWrapper"] div[class^="wrapper"][class*="cozy"]:not([class*="message"]):not([class*="system"]):not([class*="backgroundFlash"]) > div[class*="contents"] > h2[class*="header"]::before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 20px;
+  right: 20px;
+  top: calc(-1 * var(--f-msg-spacing) / 2);
+  border-bottom: thin solid var(--background-modifier-accent);
+}
+
+main[class^="chatContent"] > div[class*="messagesWrapper"] div[class^="wrapper"][class*="cozy"]:not([class*="message"]):not([class*="system"]):not([class*="backgroundFlash"]) > div[class*="contents"] > div[class*="markup"]:last-child {
+  padding: 8px 0;
+  padding-left: 80px;
+  margin-left: -80px;
+}
+
+/* Blocked */
+main[class^="chatContent"] > div[class*="messagesWrapper"] div[class^="groupStart"]:not([class*="message"]):not([class*="system"]):not([class*="backgroundFlash"]):not([class*="wrapper"]) {
+  position: relative;
+}
+
+main[class^="chatContent"] > div[class*="messagesWrapper"] div[class^="groupStart"]:not([class*="message"]):not([class*="system"]):not([class*="backgroundFlash"]):not([class*="wrapper"]) div[class^="blockedSystemMessage"] {
+  padding: 0;
+}
+
+main[class^="chatContent"] > div[class*="messagesWrapper"] div[class^="groupStart"]:not([class*="message"]):not([class*="system"]):not([class*="backgroundFlash"]):not([class*="wrapper"]) div[class^="blockedSystemMessage"] > div[class^="content"] {
+  font-size: 14px;
+}
+
+main[class^="chatContent"] > div[class*="messagesWrapper"] div[class^="groupStart"][class*="expanded"]:not([class*="message"]):not([class*="system"]):not([class*="backgroundFlash"]):not([class*="wrapper"]) {
+  background-color: transparent;
+}
+
+main[class^="chatContent"] > div[class*="messagesWrapper"] div[class^="groupStart"][class*="expanded"]:not([class*="message"]):not([class*="system"]):not([class*="backgroundFlash"]):not([class*="wrapper"])::before {
+  content: "";
+  position: absolute;
+  top: calc(-1 * var(--f-msg-spacing) / 2);
+  height: calc(100% + var(--f-msg-spacing));
+  width: 100%;
+  background-color: var(--background-message-hover);
+}
+
+main[class^="chatContent"] > div[class*="messagesWrapper"] div[class*="divider"] + div[class^="groupStart"]:not([class*="message"]):not([class*="system"]):not([class*="backgroundFlash"]):not([class*="wrapper"]) {
+  margin-top: 0;
+}
+
+main[class^="chatContent"] > div[class*="messagesWrapper"] div[class*="divider"] + div[class^="groupStart"]:not([class*="message"]):not([class*="system"]):not([class*="backgroundFlash"]):not([class*="wrapper"])::after {
+  display: none;
+}
+
+/* System */
+main[class^="chatContent"] div[class*="message-"][class*="systemMessage-"] div[class*="container-"] {
+  padding: 0;
+}
+
+main[class^="chatContent"] div[class*="message-"][class*="systemMessage-"] + div[class*="systemMessage-"] {
+  margin-top: .125rem;
+}
+
+main[class^="chatContent"] div[class*="message-"][class*="systemMessage-"] div[class*="iconContainer-"],
+div[class*="blockedSystemMessage-"] div[class*="iconContainer-"] {
+  width: 80px;
+  padding-top: 0;
+  margin-right: 0;
+  height: 1.375rem;
+}
+
+/* Input */
+main[class^="chatContent"] form[class*="form"] {
+  border-top: 1px solid var(--background-modifier-accent);
+  padding: 0;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 0;
+}
+
+main[class^="chatContent"] form[class*="form"] div[class*="channelTextArea"] {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+main[class^="chatContent"] div[class*="jumpToPresentBar"] {
+  padding: 0;
+}
+
+main[class^="chatContent"] div[class*="messagesWrapper"] div[class*="scroller"]::after {
+  display: none;
+}
+
+main[class^="chatContent"] form[class*="form"] div[class*="typing"] {
+  height: 30px;
+  left: 0;
+  right: 0;
+}
+
+/* End of Message Margin */
+main[class^="chatContent"] div[class*="messagesWrapper"] div[class*="scroller"] > div[class*="scrollerSpacer"] {
+  height: calc(var(--f-msg-spacing) / 2);
+}
+
+/* Enable chat while scrolling */
+main[class^="chatContent"] > div[class*="messagesWrapper"] > div[class^="scrollerWrap"] > div[class^="scroller"][class*="scrolling"]>* {
+  pointer-events: initial;
+}
+
+/* Appearance */
+div[aria-label="USER_SETTINGS"] div[class*="contentRegion"] main[class*="contentColumn"] div[class*="children"] > div[class*="preview"] div[class*="firstMessage-"] {
+  margin-top: 0!important;
+}
+
+div[aria-label="USER_SETTINGS"] div[class*="contentRegion"] main[class*="contentColumn"] div[class*="children"] > div[class*="preview"] div[class*="firstMessage-"]::after {
+  display: none;
+}
+
+div[aria-label="USER_SETTINGS"] div[class*="contentRegion"] main[class*="contentColumn"] div[class*="children"] > div[class*="preview"] ~ h2[class*="h2"][class*="marginTop60"] ~ div:not([class]) + div[class*="marginTop20"] div[class*="track"] > div[class*="mark"] > div[class*="markValue"] {
+  letter-spacing: -9999px;
+  color: transparent;
+}
+
+div[aria-label="USER_SETTINGS"] div[class*="contentRegion"] main[class*="contentColumn"] div[class*="children"] > div[class*="preview"] ~ h2[class*="h2"][class*="marginTop60"] ~ div:not([class]) + div[class*="marginTop20"] div[class*="track"] > div[class*="mark"] > div[class*="markValue"]::after {
+  letter-spacing: 0;
+  color: var(--text-muted);
+}
+
+div[aria-label="USER_SETTINGS"] div[class*="contentRegion"] main[class*="contentColumn"] div[class*="children"] > div[class*="preview"] ~ h2[class*="h2"][class*="marginTop60"] ~ div:not([class]) + div[class*="marginTop20"] div[class*="track"] > div[class*="mark"]:nth-child(1) > [class*="markValue"]::after {
+  content: "20px";
+}
+
+div[aria-label="USER_SETTINGS"] div[class*="contentRegion"] main[class*="contentColumn"] div[class*="children"] > div[class*="preview"] ~ h2[class*="h2"][class*="marginTop60"] ~ div:not([class]) + div[class*="marginTop20"] div[class*="track"] > div[class*="mark"]:nth-child(2) > [class*="markValue"]::after {
+  content: "25px";
+}
+
+div[aria-label="USER_SETTINGS"] div[class*="contentRegion"] main[class*="contentColumn"] div[class*="children"] > div[class*="preview"] ~ h2[class*="h2"][class*="marginTop60"] ~ div:not([class]) + div[class*="marginTop20"] div[class*="track"] > div[class*="mark"]:nth-child(3) > [class*="markValue"]::after {
+  content: "30px";
+}
+
+div[aria-label="USER_SETTINGS"] div[class*="contentRegion"] main[class*="contentColumn"] div[class*="children"] > div[class*="preview"] ~ h2[class*="h2"][class*="marginTop60"] ~ div:not([class]) + div[class*="marginTop20"] div[class*="track"] > div[class*="mark"]:nth-child(4) > [class*="markValue"]::after {
+  content: "40px";
+  color: #43b581;
+}
+
+div[aria-label="USER_SETTINGS"] div[class*="contentRegion"] main[class*="contentColumn"] div[class*="children"] > div[class*="preview"] ~ h2[class*="h2"][class*="marginTop60"] ~ div:not([class]) + div[class*="marginTop20"] div[class*="track"] > div[class*="mark"]:nth-child(5) > [class*="markValue"]::after {
+  content: "50px";
+}
+
+/* COMPACT */
+
+/* Mentions */
+div[class*="compact"][class*="mentioned"] > div[class*="contents"] {
+  background-color: var(--background-mentioned);
+  border-radius: 0 3px 3px 0;
+}
+
+/* Appearance */
+div[aria-label="USER_SETTINGS"] div[class*="contentRegion"] main[class*="contentColumn"] div[class*="children"] > div[class*="preview"][class*="compactPreview"] ~ h2[class*="h2"][class*="marginTop60"] ~ div:not([class]) + div[class*="marginTop20"] div[class*="track"] > div[class*="mark"]:nth-child(1) > [class*="markValue"]::after {
+  color: #43b581;
+}
+
+div[aria-label="USER_SETTINGS"] div[class*="contentRegion"] main[class*="contentColumn"] div[class*="children"] > div[class*="preview"][class*="compactPreview"] ~ h2[class*="h2"][class*="marginTop60"] ~ div:not([class]) + div[class*="marginTop20"] div[class*="track"] > div[class*="mark"]:nth-child(4) > [class*="markValue"]::after {
+  color: var(--text-muted);
+}
