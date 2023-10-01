@@ -28,6 +28,6 @@ div[aria-label="Help"] {
     display: none;
 }
 
-.avatarDecoration-2Wb1Au {
-    visibility: hidden;
+.avatarDecoration-2Wb1Au, .avatarDecoration-34OC0G {
+    display: none,
 }
