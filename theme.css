@@ -23,7 +23,3 @@ div[aria-label="Help"] {
 #user-context-call {
     display: none;
 }
-
-[class^="avatarDecoration-"] {
-    display: none;
-}
