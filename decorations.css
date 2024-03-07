@@ -1,0 +1,7 @@
+div[class^='profileEffects'] {
+    display: none;
+}
+
+svg[class^='avatarDecoration'] {
+    display: none;
+}
