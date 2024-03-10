@@ -5,3 +5,7 @@ div[class^='profileEffects'] {
 svg[class^='avatarDecoration'] {
     display: none;
 }
+
+img[class^='avatarDecoration'] {
+    display: none;
+}
