@@ -23,3 +23,7 @@ div[aria-label="Help"] {
 #user-context-call {
     display: none;
 }
+
+div[class^="channelAppLauncher"] {
+    display: none;
+}
