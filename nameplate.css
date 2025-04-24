@@ -15,3 +15,8 @@
         }
     }
 }
+
+/* https://discord.com/channels/1015060230222131221/1028106818368589824/1364374785899106326 */
+[class*="chipletContainerInner_"]:has([src*="/clan-badges/"]) { 
+    display: none; 
+}
