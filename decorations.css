@@ -9,3 +9,15 @@ svg[class^='avatarDecoration'] {
 img[class^='avatarDecoration'] {
     display: none;
 }
+
+/* https://ukriu.github.io/cssCord/Other/noSuperReactions.css */
+[class*="reaction"][class*="reactionMe"] {background-color: var(--message-reacted-background) !important; border-color: var(--blurple-50) !important;}
+[class*="reactionCount"] {color: var(--interactive-normal) !important;}
+[class*="effectsWrapper"] {display: none;}
+[class^="burstGlow"], [class*="reaction_"], .full-motion [class*="reaction"][class*="shakeReaction"] {
+    box-shadow: none !important; 
+    background: var(--background-secondary) !important;
+    animation: none !important;
+    animation-iteration-count: 0 !important;
+}
+[class*="hideEmoji"] {opacity: 1;}
