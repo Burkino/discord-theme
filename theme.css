@@ -1,29 +1,29 @@
 /*//META{"name":"Remove buttons","description":"Removes the annoying buttons.","author":"Burkino","version":"1"}*//**/
 button[aria-label="Open GIF picker"]{
-    display: none;
+    display: none !important;
 }
 
 button[aria-label="Send a gift"] {
-    display: none;
+    display: none !important;
 }
 button[aria-label="Open sticker picker"] {
-    display: none;
+    display: none !important;
 }
 button[aria-label="Boost this server"] {
-	display: none;
+	display: none !important;
 }
 div[aria-label="Help"] {
-    display: none;
+    display: none !important;
 }
 
 #user-context-invite-to-server {
-    display: none;
+    display: none !important;
 }
 
 #user-context-call {
-    display: none;
+    display: none !important;
 }
 
 div[class^="channelAppLauncher"] {
-    display: none;
+    display: none !important;
 }
