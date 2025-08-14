@@ -1,15 +1,15 @@
 /*//META{"name":"Remove buttons","description":"Removes the annoying buttons.","author":"Burkino","version":"1"}*//**/
-button[aria-label="Open GIF picker"]{
+div[aria-label="Open GIF picker"]{
     display: none !important;
 }
 
-button[aria-label="Send a gift"] {
+div[aria-label="Send a gift"] {
     display: none !important;
 }
-button[aria-label="Open sticker picker"] {
+div[aria-label="Open sticker picker"] {
     display: none !important;
 }
-button[aria-label="Boost this server"] {
+div[aria-label="Boost this server"] {
 	display: none !important;
 }
 div[aria-label="Help"] {
