@@ -14,7 +14,7 @@ img[class^='avatarDecoration'] {
 [class*="reaction"][class*="reactionMe"] {background-color: var(--message-reacted-background-default) !important; border-color: var(--blurple-50) !important;}
 [class*="reactionCount"] {color: var(--interactive-text-default) !important;}
 [class*="effectsWrapper"] {display: none;}
-[class^="burstGlow"], [class*="reaction_"], .full-motion [class*="reaction"][class*="shakeReaction"] {
+[class*="burstGlow"], [class$="-reaction"], .full-motion [class*="reaction"][class*="shakeReaction"] {
     box-shadow: none !important; 
     background: var(--background-surface-high) !important;
     animation: none !important;
