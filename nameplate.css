@@ -1,19 +1,5 @@
-/* https://discord.com/channels/1015060230222131221/1028106818368589824/1356780198405734471 */
-[style^="background: linear-gradient(90deg"]:has([src*="/nameplates/"]) { display: none; }
-[class*="dm_"]:has([class*="linkPlated_"]) {
-    & [class*="linkPlated_"] { padding-right: var(--space-16); }
-    & [class*="closeButtonPlated_"] {
-        opacity: 0.7;
-        &:hover { opacity: 1; }
-        & [class^="innerCloseButtonPlated"] {
-            opacity: unset; 
-            background: none;
-            & svg {
-                color: inherit;
-                &:is(:hover, :focus-within) { color: var(--interactive-hover); }
-            }
-        }
-    }
+div:has(> div > video[src*="cdn.discordapp.com/media/v1/collectibles-shop"]) {
+  display: none !important;
 }
 
 /* https://discord.com/channels/1015060230222131221/1028106818368589824/1364374785899106326 */
