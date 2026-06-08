@@ -24,13 +24,10 @@ div[aria-label="Help"] {
     display: none !important;
 }
 
-div[class^="channelAppLauncher"] {
+.app-launcher-entrypoint {
     display: none !important;
 }
 
-h3:has(span[class*="hiddenVisually"] + span[class*="headerContainer"]) {
-  display: none !important;
-}
-[role="listitem"]:has(.container__0f2e8) {
-  display: none !important;
+h3:has(.headerContainer__095fe) {
+    display: none !important;
 }
