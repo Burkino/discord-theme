@@ -10,6 +10,10 @@ img[class^='avatarDecoration'] {
     display: none;
 }
 
+div[class^='profileFrame'] {
+    display: none !important;
+}
+
 /* https://ukriu.github.io/cssCord/Other/noSuperReactions.css */
 [class*="reaction"][class*="reactionMe"] {background-color: var(--message-reacted-background-default) !important; border-color: var(--blurple-50) !important;}
 [class*="reactionCount"] {color: var(--interactive-text-default) !important;}
